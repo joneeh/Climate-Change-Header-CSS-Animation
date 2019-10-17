@@ -1,0 +1,193 @@
+html,
+body {
+    top: 0;
+    background-color: black;
+}
+
+.animatedHeader {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    margin-left: -50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.top,
+.botm {
+    position: absolute;
+}
+
+.botm {
+    padding-left: 22px;
+}
+
+h1 {
+    font-family: 'Bitter', serif;
+    color: white;
+}
+
+.top h1:nth-child(1) {
+    animation: typing-text 2s steps(14, end);
+    animation-fill-mode: both;
+    overflow: hidden;
+    white-space: nowrap;
+
+    border-right: 2px solid #03aa6f;
+}
+
+.botm h1:nth-child(1) {
+    overflow: hidden;
+    white-space: nowrap;
+    opacity: 0;
+    animation: typing-text1 2s steps(13, end);
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+
+    border-right: 2px solid #03aa6f;
+}
+
+h1 a {
+    color: #03aa6f;
+}
+
+.planetPosition {
+    opacity: 0;
+    animation-delay: 4.5s;
+    animation: show 5s;
+    animation-fill-mode: forwards;
+    position: absolute;
+    display: flex;
+    margin-left: 200px;
+    margin-top: 20px;
+    width: 100px;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+}
+
+.far-orbit {
+    width: 100%;
+    height: 100%;
+    background-color: gray;
+    opacity: .2;
+    border-radius: 50%;
+}
+
+.near-orbit {
+    width: 85%;
+    height: 85%;
+    background-color: grey;
+    opacity: .2;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.earth {
+    position: absolute;
+    width: 70%;
+    height: 70%;
+    background-image: url("../images/earth.svg");
+}
+
+img {
+    width: 15%;
+}
+
+.sprites {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.love {
+    animation: spin 12s linear 0s infinite;
+}
+
+.love img {
+    top: -5px;
+    position: absolute;
+}
+
+.hearts {
+    animation: spin-negative 7s linear 0s infinite;
+}
+
+.hearts img {
+    top: -10px;
+    position: absolute;
+}
+
+.like {
+    animation: spin 9s linear 0s infinite;
+}
+
+
+.like img {
+    top: -20px;
+    position: absolute;
+}
+
+
+@keyframes typing-text {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 253.313px;
+    }
+}
+
+
+@keyframes typing-text1 {
+    from {
+        width: 0;
+        opacity: 1;
+    }
+
+    10% {
+        margin-bottom: -53px;
+    }
+
+    to {
+        width: 231.313px;
+        opacity: 1;
+        margin-bottom: -53px;
+    }
+}
+
+@keyframes show {
+    from {
+        opacity: 0;
+    }
+    80%{
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes spin-negative {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(-360deg);
+    }
+}
